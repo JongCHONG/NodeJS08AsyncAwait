@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "username": "jack",
+    "email": "jack@jack.jack",
+    "password": "hello",
+    "age": 99,
+    "profilePicture": "http://localhost:5000/06-01-2022-02-35-23-diablo3avatar.jpg"
+  },
+  {
+    "id": 2,
+    "username": "john",
+    "email": "john@john.john",
+    "password": "yoyo",
+    "age": 1,
+    "profilePicture": "http://localhost:5000/06-01-2022-02-35-23-diablo3avatar.jpg"
+  },
+  {
+    "age": "2",
+    "email": "bezobby@bobby.bobby",
+    "password": "bobbybobby",
+    "username": "bobbyez",
+    "id": 3,
+    "profilePicture": "http://localhost:5000/06-01-2022-02-35-23-diablo3avatar.jpg"
+  }
+]
