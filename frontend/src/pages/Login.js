@@ -27,21 +27,7 @@ const Login = () => {
       password: ""
     },
     onSubmit: values => {
-      fetch('http://localhost:5000/auth/login', {
-        method: 'post',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include',
-        body: JSON.stringify(values)
-      })
-        .then(response => {
-          if (response.status >= 400) {
-            alert(response.statusText)
-          } else {
-            navigate('/admin')
-          }
-        })
+      connect(values)
     },
     validateOnChange: false,
     validationSchema: Yup.object({
@@ -51,6 +37,22 @@ const Login = () => {
         .required("Password is required")
     })
   })
+
+  const connect = async (values) => {
+    const response = await fetch('http://localhost:5000/auth/login', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify(values)
+    })
+    if (response.status >= 400) {
+      alert(response.statusText)
+    } else {
+      navigate('/admin')
+    }
+  }
 
   return (
     <Grid templateColumns='repeat(2, 1fr)' h='100vh'>
